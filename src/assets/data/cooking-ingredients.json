@@ -1,0 +1,36 @@
+{
+    "Mushroom": {
+        "Ingredient-name": "Mushroom",
+        "Craft-usage": [
+            "Chicken-Mushroom Skewer",
+            "Fruity Skewers",
+            "Triple-Layered Consommé",
+            "Cold Noodles with Mountain Delicacies",
+            "Noodles with Mountain Delicacies",
+            "Qingce Stir Fry",
+            "Invigorating Pizza",
+            "Mushroom Pizza"
+        ],
+        "Obtained-from": [
+            "Found in the wild",
+            "Purchased at Wanmin Restaurant"
+        ]
+    },
+    "Fowl": {
+        "Ingredient-name": "Fowl",
+        "Craft-usage": [
+            "Chicken-Mushroom Skewer",
+            "Fruity Skewers",
+            "Triple-Layered Consommé",
+            "Cold Noodles with Mountain Delicacies",
+            "Noodles with Mountain Delicacies",
+            "Qingce Stir Fry",
+            "Invigorating Pizza",
+            "Mushroom Pizza"
+        ],
+        "Obtained-from": [
+            "Found in the wild",
+            "Purchased at Wanmin Restaurant"
+        ]
+    }
+}

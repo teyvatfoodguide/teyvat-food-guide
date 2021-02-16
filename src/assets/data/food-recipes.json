@@ -1,0 +1,46 @@
+{
+    "Chicken-Mushroom Skewer":{
+        "Food-name": "Chicken-Mushroom Skewer",
+        "Ingrediants": [
+            {
+                "Ingrediant-name": "Mushroom",
+                "Amount": 1
+            },
+            {
+                "Ingrediant-name": "Fowl",
+                "Amount": 1
+            }
+        ],
+        "Food-potency":{
+            "Normal": {
+                "Description": "A skewer of mushrooms and poultry. Fresh poultry is complimented by fragrant mushrooms. Don't be picky, chow down!",
+                "Effect": "Restores 9% of Max HP and 1,000 HP to the selected character."
+            },
+            "Delicious": {
+                "Description": "A skewer of mushrooms and poultry. All the best the wild has to offer are pierced on just one stick.",
+                "Effect": "Restores 10% of Max HP and 1,200 HP to the selected character."
+            },
+            "Suspicious": {
+                "Description": "A skewer of mushrooms and poultry. At first glance it's hard to tell which is which.",
+                "Effect": "Restores 8% of Max HP and 800 HP to the selected character."
+            }
+        }
+    },
+    "Fruity Skewers":{
+        "Food-name": "Fruity Skewers",
+        "Base-recipe": "Chicken-Mushroom Skewer",
+        "Ingrediants": [
+            {
+                "Ingrediant-name": "Mushroom",
+                "Amount": 1
+            },
+            {
+                "Ingrediant-name": "Fowl",
+                "Amount": 1
+            }
+        ],
+        "Cooker": "Kaeya",
+        "Description": "Kaeya's specialty. A chewy skewer with a rich sweet aftertaste.Wait...Is this really the smell of fruit?",
+        "Effect": "Restores 16% of Max HP and an additional 1,350 HP."
+    }
+}
