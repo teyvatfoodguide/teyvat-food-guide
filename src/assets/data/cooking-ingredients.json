@@ -1,7 +1,7 @@
-{
-    "Mushroom": {
-        "Ingredient-name": "Mushroom",
-        "Craft-usage": [
+[
+    {
+        "name": "Mushroom",
+        "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
             "Triple-Layered Consommé",
@@ -11,14 +11,14 @@
             "Invigorating Pizza",
             "Mushroom Pizza"
         ],
-        "Obtained-from": [
+        "obtainedFrom": [
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
         ]
     },
-    "Fowl": {
-        "Ingredient-name": "Fowl",
-        "Craft-usage": [
+    {
+        "name": "Fowl",
+        "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
             "Triple-Layered Consommé",
@@ -28,9 +28,9 @@
             "Invigorating Pizza",
             "Mushroom Pizza"
         ],
-        "Obtained-from": [
+        "obtainedFrom": [
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
         ]
     }
-}
+]
