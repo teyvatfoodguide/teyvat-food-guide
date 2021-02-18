@@ -1,6 +1,7 @@
 [
     {
         "name": "Mushroom",
+        "star": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
@@ -18,6 +19,7 @@
     },
     {
         "name": "Fowl",
+        "star": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",

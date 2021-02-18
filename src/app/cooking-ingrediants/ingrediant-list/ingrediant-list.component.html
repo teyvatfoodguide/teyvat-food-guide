@@ -1,0 +1,30 @@
+<h2>Cooking Ingrediants</h2>
+<!-- <ul>
+  <li *ngFor="let ingrediant of ingrediants">
+    <span>{{ingrediant.name}}</span> 
+  </li>
+</ul> -->
+<!-- <table mat-table [dataSource]="ingrediants">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let ingrediant"> {{ingrediant.name}} </td>
+    </ng-container>
+</table> -->
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Star</th>
+  </tr>
+  <tr *ngFor="let ingrediant of ingrediants">
+    <td>
+      <a [routerLink]="['/ingrediants', 'ingrediant.name']">
+        <span>
+          {{ingrediant.name}}
+        </span>
+      </a>
+    </td>
+    <td>{{ingrediant.star}}</td>
+
+    <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td>
+  </tr>
+</table>

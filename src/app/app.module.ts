@@ -8,8 +8,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MatTableModule } from '@angular/material/table';
 import { FoodComponent } from './food/food.component';
-import { CookingIngrediantComponent } from './cooking-ingrediant/cooking-ingrediant.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingrediants.module'; 
 
 
 @NgModule({
@@ -17,14 +18,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomeComponent,
     FoodComponent,
-    CookingIngrediantComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    CookingIngrediantsModule,
+    AppRoutingModule //put it at last to accept all the routers' setting
   ],
   providers: [],
   bootstrap: [AppComponent]
