@@ -1,23 +1,14 @@
 <h2>Cooking Ingrediants</h2>
-<!-- <ul>
-  <li *ngFor="let ingrediant of ingrediants">
-    <span>{{ingrediant.name}}</span> 
-  </li>
-</ul> -->
-<!-- <table mat-table [dataSource]="ingrediants">
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let ingrediant"> {{ingrediant.name}} </td>
-    </ng-container>
-</table> -->
 <table>
   <tr>
+    <th>Image</th>
     <th>Name</th>
     <th>Star</th>
   </tr>
   <tr *ngFor="let ingrediant of ingrediants">
+    <td></td>
     <td>
-      <a [routerLink]="['/ingrediants', 'ingrediant.name']">
+      <a [routerLink]="['/ingrediant', ingrediant.name]">
         <span>
           {{ingrediant.name}}
         </span>

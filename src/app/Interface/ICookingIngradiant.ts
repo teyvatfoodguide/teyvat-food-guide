@@ -1,4 +1,4 @@
-export interface ICookingIngradiant{
+export interface CookingIngradiant{
     name: string,
     craftUsage: string[],
     obtainedFrom: string[]

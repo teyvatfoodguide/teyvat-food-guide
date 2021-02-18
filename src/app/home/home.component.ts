@@ -11,9 +11,9 @@ export class HomeComponent implements OnInit {
   constructor(private _httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this._httpClient.get("assets/data/foods.json").subscribe(data =>{
-      console.log(data);
-    })
+    // this._httpClient.get("assets/data/foods.json").subscribe(data =>{
+    //   console.log(data);
+    // })
   }
 
 }

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap} from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 import { DataService } from '../../data.service';
-import { ActivatedRoute } from '@angular/router';
+import { CookingIngradiant } from 'src/app/Interface/ICookingIngradiant';
+
 
 
 @Component({
@@ -10,12 +15,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IngrediantDetailComponent implements OnInit {
 
-  constructor(private _data: DataService, private _route: ActivatedRoute) { }
+  ingrediant: Observable<CookingIngradiant>
+
+  constructor(
+    private _router: Router, 
+    private _route: ActivatedRoute, 
+    private _data: DataService
+  ) { }
 
   ngOnInit(): void {
-    this._route.params.subscribe(param => {
-      console.log(param);
-    })
+    this.ingrediant = this._route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this._data.getIngrediant(params.get('name')))
+    );
+    console.log("data is " + this.ingrediant)
   }
 
 }
