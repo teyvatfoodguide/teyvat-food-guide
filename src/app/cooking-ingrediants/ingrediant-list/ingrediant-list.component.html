@@ -4,9 +4,12 @@
     <th>Image</th>
     <th>Name</th>
     <th>Star</th>
+    <th>Description</th>
   </tr>
   <tr *ngFor="let ingrediant of ingrediants">
-    <td></td>
+    <td>
+      <img src='{{"assets/images/" + ingrediant.name + ".png"}}'>
+    </td>
     <td>
       <a [routerLink]="['/ingrediant', ingrediant.name]">
         <span>
@@ -15,7 +18,7 @@
       </a>
     </td>
     <td>{{ingrediant.star}}</td>
-
-    <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td>
+    <td>{{ingrediant.description}}</td>
+    <!-- <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td> -->
   </tr>
 </table>

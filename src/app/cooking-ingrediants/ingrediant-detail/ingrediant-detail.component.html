@@ -1,4 +1,27 @@
-<p>ingrediant-detail works!</p>
-<div *ngIf="ingrediant">
-    <p>{{ingrediant.name}}</p>
+<div *ngIf="name">
+    <h2>{{name}}</h2>
+</div>
+<div *ngFor="let ingrediant of ingrediants">
+    <table *ngIf="ingrediant.name==name">
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Star</th>
+        </tr>
+        <tr>
+          <td>
+              <img src='{{"assets/images/" + ingrediant.name + ".png"}}'>
+          </td>
+          <td>
+            <a [routerLink]="['/ingrediant', ingrediant.name]">
+              <span>
+                {{ingrediant.name}}
+              </span>
+            </a>
+          </td>
+          <td>{{ingrediant.star}}</td>
+      
+          <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td>
+        </tr>
+      </table>
 </div>

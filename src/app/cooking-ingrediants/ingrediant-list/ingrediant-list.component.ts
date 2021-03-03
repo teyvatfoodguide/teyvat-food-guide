@@ -22,6 +22,7 @@ export class IngrediantListComponent implements OnInit {
     this._data.getIngrediants().subscribe((data) =>{
       this.ingrediants = <CookingIngradiant> data
     })
+    console.log(this.ingrediants)
     
 
   }

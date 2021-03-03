@@ -15,7 +15,8 @@
         "obtainedFrom": [
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
-        ]
+        ],
+        "description" : "Hardy common fungi. Can grow anywhere with the right amount of shade and moisture."
     },
     {
         "name": "Fowl",
@@ -33,6 +34,8 @@
         "obtainedFrom": [
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
-        ]
+        ],
+        "description" : "A fresh bird. Handled correctly it can make a hearty meal."
+
     }
 ]

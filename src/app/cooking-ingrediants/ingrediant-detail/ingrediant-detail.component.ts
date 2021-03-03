@@ -15,20 +15,22 @@ import { CookingIngradiant } from 'src/app/Interface/ICookingIngradiant';
 })
 export class IngrediantDetailComponent implements OnInit {
 
-  ingrediant: Observable<CookingIngradiant>
+  name: String
+  ingrediants;
 
   constructor(
     private _router: Router, 
     private _route: ActivatedRoute, 
     private _data: DataService
-  ) { }
+  ) { 
+    this.name = this._route.snapshot.params.name
+
+  }
 
   ngOnInit(): void {
-    this.ingrediant = this._route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this._data.getIngrediant(params.get('name')))
-    );
-    console.log("data is " + this.ingrediant)
+    this._data.getIngrediants().subscribe((data) =>{
+      this.ingrediants = <CookingIngradiant> data
+    })
   }
 
 }
