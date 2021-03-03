@@ -10,7 +10,9 @@ import { MatTableModule } from '@angular/material/table';
 import { FoodComponent } from './food/food.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingrediants.module'; 
+
+import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingrediants.module';
+import { FoodModule } from './food/food.module' 
 
 
 @NgModule({
@@ -18,7 +20,7 @@ import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingredia
     AppComponent,
     HomeComponent,
     FoodComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingredia
     BrowserAnimationsModule,
     MatTableModule,
     CookingIngrediantsModule,
+    FoodModule,
     AppRoutingModule //put it at last to accept all the routers' setting
   ],
   providers: [],
