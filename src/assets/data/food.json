@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Apple",
+        "rarity": 1,
+        "type": "Guardian",
+        "hasRecipe": false,
+        "effect": "Restores 300 HP." ,
+        "description": "Crisp and fragrant. Delicious raw or fermented into wine. Can be also made into a refreshing alcohol—free beverage. ",
+        "obtainedFrom": ["Picked up from apple tree", "Purchase from sellers"]
+    },
+    {
+        "name": "Chicken-Mushroom Skewer",
+        "rarity": 1,
+        "type": "Guardian",
+        "hasRecipe": true
+    }
+]

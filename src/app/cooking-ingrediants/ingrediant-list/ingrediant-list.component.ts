@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
-import { ActivatedRoute } from '@angular/router';
 import { CookingIngradiant } from '../../Interface/ICookingIngradiant';
-import { switchMap, map } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
 
 
 @Component({
@@ -14,15 +11,13 @@ import { Observable, of } from 'rxjs';
 export class IngrediantListComponent implements OnInit {
 
   ingrediants;
-  selectedName: string;
 
-  constructor(private _data: DataService, private _route: ActivatedRoute) { }
+  constructor(private _data: DataService) { }
 
   ngOnInit(): void {
     this._data.getIngrediants().subscribe((data) =>{
       this.ingrediants = <CookingIngradiant> data
     })
-    console.log(this.ingrediants)
     
 
   }

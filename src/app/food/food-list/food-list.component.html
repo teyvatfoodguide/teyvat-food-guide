@@ -1,1 +1,24 @@
-<p>food-list works!</p>
+<h2>Food</h2>
+<table *ngIf="food">
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Rarity</th>
+      <th>Type</th>
+    </tr>
+    <tr *ngFor="let f of food">
+      <td>
+        <img src='{{"assets/images/" + f.name + ".png"}}'>
+      </td>
+      <td>
+        <a [routerLink]="['/food', f.name]">
+          <span>
+            {{f.name}}
+          </span>
+        </a>
+      </td>
+      <td>{{f.rarity}}</td>
+      <td>{{f.type}}</td>
+      <!-- <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td> -->
+    </tr>
+  </table>

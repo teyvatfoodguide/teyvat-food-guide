@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
+import { Food } from '../../Interface/IFood';
 
 @Component({
   selector: 'app-food-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodListComponent implements OnInit {
 
-  constructor() { }
+  food;
+  recipe;
+
+  constructor(private _data: DataService) { }
 
   ngOnInit(): void {
+    this._data.getFood().subscribe((data) =>{
+      this.food = <Food> data
+    })
   }
 
 }

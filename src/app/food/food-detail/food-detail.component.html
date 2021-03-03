@@ -1,1 +1,28 @@
-<p>food-detail works!</p>
+<h2 *ngIf="name">{{name}}</h2>
+<div *ngFor="let f of food">
+    <table *ngIf="f.name==name">
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Rarity</th>
+          <th>Type</th>
+          <th>Recipe</th>
+        </tr>
+        <tr>
+          <td>
+              <img src='{{"assets/images/" + f.name + ".png"}}'>
+          </td>
+          <td>
+            <a [routerLink]="['/food', f.name]">
+              <span>
+                {{f.name}}
+              </span>
+            </a>
+          </td>
+          <td>{{f.rarity}}</td>
+          <td>{{f.type}}</td>
+          <td *ngIf="f.hasRecipe==true; else elseBlock">recipe</td>
+          <ng-template #elseBlock>no recipe</ng-template>
+        </tr>
+      </table>
+</div>
