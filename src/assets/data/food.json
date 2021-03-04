@@ -12,6 +12,18 @@
         "name": "Chicken-Mushroom Skewer",
         "rarity": 1,
         "type": "Guardian",
-        "hasRecipe": true
+        "hasRecipe": true,
+        "effect": "",
+        "description": "",
+        "obtainedFrom": []
+    },
+    {
+        "name": "Fruity Skewers",
+        "rarity": 1,
+        "type": "Guardian",
+        "hasRecipe": true,
+        "effect": "",
+        "description": "",
+        "obtainedFrom": []
     }
 ]

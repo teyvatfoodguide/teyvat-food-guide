@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FoodRoutingModule } from './food-routing.module'
-import { FoodListComponent } from './food-list/food-list.component'
-import { FoodDetailComponent } from './food-detail/food-detail.component'
-
+import { FoodRoutingModule } from './food-routing.module';
+import { FoodListComponent } from './food-list/food-list.component';
+import { FoodInfoComponent } from './food-info/food-info/food-info.component';
 
 @NgModule({
   declarations: [
     FoodListComponent,
-    FoodDetailComponent
+    FoodInfoComponent
   ],
   imports: [
     CommonModule,

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
-import { DataService } from '../../data.service';
+import { DataService } from '../../../data.service';
 import { Food } from 'src/app/Interface/IFood';
+import { Recipe } from '../../../Interface/IRecipe';
+
 
 @Component({
   selector: 'app-food-detail',
@@ -13,6 +15,7 @@ export class FoodDetailComponent implements OnInit {
 
   name: String;
   food;
+  recipes;
 
   constructor(
     private _route: ActivatedRoute, 
@@ -23,6 +26,9 @@ export class FoodDetailComponent implements OnInit {
   ngOnInit(): void {
     this._data.getFood().subscribe((data) =>{
       this.food = <Food> data
+    })
+    this._data.getRecipes().subscribe((data) =>{
+      this.recipes = <Recipe> data
     })
   }
 

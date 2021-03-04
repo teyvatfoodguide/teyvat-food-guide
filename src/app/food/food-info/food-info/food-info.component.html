@@ -1,0 +1,24 @@
+<div class="container" >
+    <!-- <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list> -->
+
+    <div *ngFor="let f of food">
+        <div *ngIf="f.name==name">
+            <div>
+                <img src='{{"assets/images/" + f.name + ".png"}}'>
+            </div>
+            <div *ngIf="f.hasRecipe==true">
+                <nav class="subNav">
+                <a routerLink="./detail" routerLinkActive="active">Details</a>
+                <a routerLink="./reallife-recipe" routerLinkActive="active">Real-life Recipe</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>

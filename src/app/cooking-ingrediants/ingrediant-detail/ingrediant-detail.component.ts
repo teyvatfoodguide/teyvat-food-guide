@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 import { DataService } from '../../data.service';
-import { CookingIngradiant } from 'src/app/Interface/ICookingIngradiant';
+import { CookingIngradiant } from 'src/app/Interface/ICookingIngredient';
 
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
-import { CookingIngradiant } from '../../Interface/ICookingIngradiant';
+import { CookingIngradiant } from '../../Interface/ICookingIngredient';
 
 
 @Component({

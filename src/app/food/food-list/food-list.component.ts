@@ -10,7 +10,6 @@ import { Food } from '../../Interface/IFood';
 export class FoodListComponent implements OnInit {
 
   food;
-  recipe;
 
   constructor(private _data: DataService) { }
 
@@ -18,6 +17,7 @@ export class FoodListComponent implements OnInit {
     this._data.getFood().subscribe((data) =>{
       this.food = <Food> data
     })
+    
   }
 
 }

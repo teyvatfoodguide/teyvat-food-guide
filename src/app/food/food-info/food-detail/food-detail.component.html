@@ -1,0 +1,63 @@
+<div class>
+  <h2 *ngIf="name">{{name}}</h2>
+  <div *ngFor="let f of food">
+    <div *ngIf="f.name==name">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Rarity</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>
+            <a [routerLink]="['/food', f.name]">
+              <span>
+                {{f.name}}
+              </span>
+            </a>
+          </td>
+          <td>{{f.rarity}}</td>
+          <td>{{f.type}}</td>
+        </tr>
+      </table>
+  
+      <div *ngIf="f.hasRecipe==true; else elseBlock">
+        <div *ngFor="let r of recipes">
+          <table *ngIf="r.name==name">
+            <tr>
+              <th>Ingredient</th>
+              <th>Amount</th>
+            </tr>
+            <tr *ngFor="let i of r.ingredients">
+              <td>{{i.name}}</td>
+              <td>{{i.amount}}</td>
+            </tr>
+  
+          </table>
+        </div>
+      </div>
+      
+      <ng-template #elseBlock>
+          <table>
+            <tr>
+              <th>Effect</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>{{f.effect}}</td>
+              <td>{{f.description}}</td>
+            </tr>
+            <tr>
+              <th>Obtained From</th>
+            </tr>
+            <tr>
+              {{f.obtainedFrom}}
+            </tr>
+          </table>
+        
+        
+      </ng-template>
+  
+    </div>
+  </div>
+</div>
