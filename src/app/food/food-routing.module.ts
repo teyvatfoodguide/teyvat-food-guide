@@ -8,7 +8,7 @@ const routes: Routes = [
     component: FoodListComponent,
   },
   {
-    path: 'food/:name', 
+    path: 'food/:id', 
     loadChildren: () => import('./food-info/food-info.module').then(m => m.FoodInfoModule)
   }
 ];

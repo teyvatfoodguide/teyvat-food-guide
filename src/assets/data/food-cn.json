@@ -1,16 +1,16 @@
 [
     {
         "id": "Apple",
-        "name": "Apple",
+        "name": "苹果",
         "rarity": 1,
         "hasRecipe": false,
-        "effect": "Restores 300 HP." ,
-        "description": "Crisp and fragrant. Delicious raw or fermented into wine. Can be also made into a refreshing alcohol—free beverage. ",
+        "effect": "为选中的角色恢复300点生命值。" ,
+        "description": "爽脆可口的酸甜果实，无论生食或是酿酒都很是美味。  ",
         "obtainedFrom": ["Picked up from apple tree", "Purchase from sellers"]
     },
     {
         "id": "Chicken-Mushroom Skewer",
-        "name": "Chicken-Mushroom Skewer",
+        "name": "野菇鸡肉串",
         "rarity": 1,
         "hasRecipe": true,
         "effect": "",
@@ -19,7 +19,7 @@
     },
     {
         "id": "Fruity Skewers",
-        "name": "Fruity Skewers",
+        "name": "果香串烤",
         "rarity": 1,
         "hasRecipe": true,
         "effect": "",

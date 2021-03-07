@@ -10,6 +10,7 @@ export interface FoodPotency{
 }
 
 export interface Recipe{
+    id: string,
     name: string,
     ingredients: Ingredient[],
     obtainedFrom: string[],

@@ -4,21 +4,18 @@
       <th>Image</th>
       <th>Name</th>
       <th>Rarity</th>
-      <th>Type</th>
     </tr>
     <tr *ngFor="let f of food">
       <td>
-        <img src='{{"assets/images/" + f.name + ".png"}}'>
+        <img class="icon" src='{{"assets/images/" + f.id + ".png"}}'>
       </td>
       <td>
-        <a [routerLink]="['/food', f.name]">
+        <a [routerLink]="['/food', f.id]">
           <span>
             {{f.name}}
           </span>
         </a>
       </td>
       <td>{{f.rarity}}</td>
-      <td>{{f.type}}</td>
-      <!-- <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td> -->
     </tr>
   </table>

@@ -1,7 +1,7 @@
 [
     {
         "id": "Mushroom",
-        "name": "Mushroom",
+        "name": "蘑菇",
         "star": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
@@ -17,11 +17,11 @@
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
         ],
-        "description" : "Hardy common fungi. Can grow anywhere with the right amount of shade and moisture."
+        "description" : "生命力旺盛的常见菌类。只要拥有适宜的荫蔽与水，在何处都能蓬勃生长。"
     },
     {
         "id": "Fowl",
-        "name": "Fowl",
+        "name": "禽肉",
         "star": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
@@ -37,7 +37,7 @@
             "Found in the wild",
             "Purchased at Wanmin Restaurant"
         ],
-        "description" : "A fresh bird. Handled correctly it can make a hearty meal."
+        "description" : "禽类的新鲜肉块。经过适当处理可以制成让人精神一振的佳肴。"
 
     }
 ]

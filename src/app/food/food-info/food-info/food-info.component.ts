@@ -11,17 +11,25 @@ import { Food } from 'src/app/Interface/IFood';
 })
 export class FoodInfoComponent implements OnInit {
 
-  name: String;
+  id: String;
   food;
+  lang: string;
+  potency = 'normal'
+
 
   constructor(private _route: ActivatedRoute, private _data: DataService) { 
-    this.name = this._route.snapshot.params.name
+    this.id = this._route.snapshot.params.id
   }
 
   ngOnInit(): void {
-    this._data.getFood().subscribe((data) =>{
+    this.lang = localStorage.getItem('lang') || 'en'
+    this._data.getFood(this.lang).subscribe((data) =>{
       this.food = <Food> data
     })
+  }
+
+  changePotency(p:string){
+    this.potency = p;
   }
 
 }

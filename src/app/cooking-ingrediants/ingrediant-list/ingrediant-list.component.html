@@ -8,10 +8,10 @@
   </tr>
   <tr *ngFor="let ingrediant of ingrediants">
     <td>
-      <img src='{{"assets/images/" + ingrediant.name + ".png"}}'>
+      <img class="icon" src='{{"assets/images/" + ingrediant.id + ".png"}}'>
     </td>
     <td>
-      <a [routerLink]="['/ingrediant', ingrediant.name]">
+      <a [routerLink]="['/ingrediant', ingrediant.id]">
         <span>
           {{ingrediant.name}}
         </span>

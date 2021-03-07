@@ -1,27 +1,23 @@
-# Teyvatfoodguide
+# Teyvat Food Guide (in progress)
+## About
+* A single page web App for collecting information about all food and ingredients from [Genshin Impact](https://genshin.mihoyo.com/en/home)
+* Also showing the food and ingredients in real life that reference them
+* And including the recipe of making these dishes in real life with tutorial 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+## Technology
+* Build by Angular 11, with the support of Node.js
+* Deploy on Github Page with [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages)
+* Styling with SCSS
+* Manage data with local json files, access them with http-get
+* Using local storage of browser to store the language config
+* And more comming soon...
 
-## Development server
+## Reference
+* [Angular Docs](https://angular.io/docs)
+* [Angular Router Tutorial: tour of heroes](https://angular.io/guide/router-tutorial-toh)
+* [Angular: Communicating with backend services using HTTP](https://angular.io/guide/http)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## App structure
+* check sample structure of the app in /doc
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

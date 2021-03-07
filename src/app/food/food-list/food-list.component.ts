@@ -10,11 +10,13 @@ import { Food } from '../../Interface/IFood';
 export class FoodListComponent implements OnInit {
 
   food;
+  lang: string;
 
   constructor(private _data: DataService) { }
 
   ngOnInit(): void {
-    this._data.getFood().subscribe((data) =>{
+    this.lang = localStorage.getItem('lang') || 'en'
+    this._data.getFood(this.lang).subscribe((data) =>{
       this.food = <Food> data
     })
     

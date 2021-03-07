@@ -1,8 +1,5 @@
-<div *ngIf="name">
-    <h2>{{name}}</h2>
-</div>
-<div *ngFor="let ingrediant of ingrediants">
-    <table *ngIf="ingrediant.name==name">
+<div *ngFor="let ingredient of ingredients">
+    <table *ngIf="ingredient.id==id">
         <tr>
           <th>Image</th>
           <th>Name</th>
@@ -10,18 +7,18 @@
         </tr>
         <tr>
           <td>
-              <img src='{{"assets/images/" + ingrediant.name + ".png"}}'>
+              <img src='{{"assets/images/" + ingredient.id + ".png"}}'>
           </td>
           <td>
-            <a [routerLink]="['/ingrediant', ingrediant.name]">
+            <a [routerLink]="['/ingrediant', ingredient.id]">
               <span>
-                {{ingrediant.name}}
+                {{ingredient.name}}
               </span>
             </a>
           </td>
-          <td>{{ingrediant.star}}</td>
+          <td>{{ingredient.star}}</td>
       
-          <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td>
+          <td *ngFor="let usage of ingredient.craftUsage">{{usage}}</td>
         </tr>
       </table>
 </div>

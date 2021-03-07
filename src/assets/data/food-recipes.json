@@ -1,5 +1,6 @@
 [
     {
+        "id": "Chicken-Mushroom Skewer",
         "name": "Chicken-Mushroom Skewer",
         "ingredients": [
             {
@@ -32,6 +33,7 @@
         ]
     },
     {
+        "id": "Fruity Skewers",
         "name": "Fruity Skewers",
         "ingredients": [
             {

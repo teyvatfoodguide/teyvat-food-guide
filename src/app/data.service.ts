@@ -10,16 +10,31 @@ export class DataService {
 
   }
 
-  getIngrediants(){
-    return this._http.get('assets/data/cooking-ingredients.json');
+  getIngredients(locole: string){
+    switch(locole){
+      case 'cn': 
+        return this._http.get('assets/data/cooking-ingredients-cn.json');
+      default:
+        return this._http.get('assets/data/cooking-ingredients.json');
+    }
   }
 
-  getFood(){
-    return this._http.get('assets/data/food.json');
+  getFood(locole: string){
+    switch(locole){
+      case 'cn': 
+        return this._http.get('assets/data/food-cn.json');
+      default:
+        return this._http.get('assets/data/food.json');
+    }
   }
 
-  getRecipes(){
-    return this._http.get('assets/data/food-recipes.json');
+  getRecipes(locole: string){
+    switch(locole){
+      case 'cn': 
+        return this._http.get('assets/data/food-recipes-cn.json');
+      default:
+        return this._http.get('assets/data/food-recipes.json');
+    }
 
   }
 

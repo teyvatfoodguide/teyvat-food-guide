@@ -5,6 +5,9 @@ import { FoodRoutingModule } from './food-routing.module';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodInfoComponent } from './food-info/food-info/food-info.component';
 
+import { MatButtonToggleModule } from '@angular/material/button-toggle'; 
+
+
 @NgModule({
   declarations: [
     FoodListComponent,
@@ -12,7 +15,8 @@ import { FoodInfoComponent } from './food-info/food-info/food-info.component';
   ],
   imports: [
     CommonModule,
-    FoodRoutingModule
+    FoodRoutingModule,
+    MatButtonToggleModule
   ]
 })
 export class FoodModule { }

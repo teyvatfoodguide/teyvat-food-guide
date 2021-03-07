@@ -13,21 +13,24 @@ import { Recipe } from '../../../Interface/IRecipe';
 })
 export class FoodDetailComponent implements OnInit {
 
-  name: String;
+  id: String;
   food;
   recipes;
+  lang: string;
 
   constructor(
     private _route: ActivatedRoute, 
     private _data: DataService) {
-      this.name = this._route.snapshot.params.name
+      this.id = this._route.snapshot.params.id
   }
 
   ngOnInit(): void {
-    this._data.getFood().subscribe((data) =>{
+    this.lang = localStorage.getItem('lang') || 'en'
+
+    this._data.getFood(this.lang).subscribe((data) =>{
       this.food = <Food> data
     })
-    this._data.getRecipes().subscribe((data) =>{
+    this._data.getRecipes(this.lang).subscribe((data) =>{
       this.recipes = <Recipe> data
     })
   }

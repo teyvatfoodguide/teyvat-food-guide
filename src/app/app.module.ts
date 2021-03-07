@@ -6,13 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingrediants.module';
 import { FoodModule } from './food/food.module'; 
 import { FoodInfoModule } from './food/food-info/food-info.module';
+import { MaterialModule } from'./material/material.module';
 
-import { MatGridListModule } from '@angular/material/grid-list'; 
+import { FooterComponent } from './footer/footer.component'; 
 
 
 @NgModule({
@@ -20,13 +22,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    MatGridListModule,
     BrowserAnimationsModule,
-
+    MaterialModule,
     CookingIngrediantsModule,
     FoodModule,
     FoodInfoModule,

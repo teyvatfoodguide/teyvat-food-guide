@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 import { DataService } from '../../data.service';
-import { CookingIngradiant } from 'src/app/Interface/ICookingIngredient';
+import { CookingIngredient } from 'src/app/Interface/ICookingIngredient';
 
 
 
@@ -13,20 +13,22 @@ import { CookingIngradiant } from 'src/app/Interface/ICookingIngredient';
 })
 export class IngrediantDetailComponent implements OnInit {
 
-  name: String
-  ingrediants;
+  id: String
+  ingredients;
+  lang: string;
 
   constructor(
     private _route: ActivatedRoute, 
     private _data: DataService
   ) { 
-    this.name = this._route.snapshot.params.name
+    this.id = this._route.snapshot.params.id
 
   }
 
   ngOnInit(): void {
-    this._data.getIngrediants().subscribe((data) =>{
-      this.ingrediants = <CookingIngradiant> data
+    this.lang = localStorage.getItem('lang') || 'en' ;
+    this._data.getIngredients(this.lang).subscribe((data) =>{
+      this.ingredients = <CookingIngredient> data
     })
   }
 

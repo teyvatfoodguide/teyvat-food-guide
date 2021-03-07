@@ -7,15 +7,14 @@ import { FoodInfoComponent } from './food-info/food-info.component';
 
 const foodListRoutes: Routes = [
   {
-    path: '',
+    path: 'food',
     component: FoodInfoComponent,
     children: [
       {
         path: '',
         children: [
           {path: 'detail', component: FoodDetailComponent},
-          {path: 'reallife-recipe', component: ReallifeRecipeComponent},
-          {path: '', redirectTo: 'detail', pathMatch: 'full'}
+          {path: 'reallife-recipe', component: ReallifeRecipeComponent}
         ]
       }
     ]
