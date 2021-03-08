@@ -6,19 +6,20 @@ import { ReallifeRecipeComponent } from './reallife-recipe/reallife-recipe.compo
 import { FoodInfoComponent } from './food-info/food-info.component';
 
 const foodListRoutes: Routes = [
-  {
-    path: 'food',
-    component: FoodInfoComponent,
-    children: [
-      {
-        path: '',
-        children: [
-          {path: 'detail', component: FoodDetailComponent},
-          {path: 'reallife-recipe', component: ReallifeRecipeComponent}
-        ]
-      }
-    ]
-  }
+  // {
+  //   path: 'food/:id',
+  //   component: FoodInfoComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       children: [
+  //         {path: 'detail', component: FoodDetailComponent},
+  //         {path: 'reallife-recipe', component: ReallifeRecipeComponent}
+  //       ]
+  //     }
+  //   ]
+  // },
+
 ];
 
 @NgModule({

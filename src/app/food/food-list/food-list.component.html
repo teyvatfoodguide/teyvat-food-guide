@@ -10,7 +10,7 @@
         <img class="icon" src='{{"assets/images/" + f.id + ".png"}}'>
       </td>
       <td>
-        <a [routerLink]="['/food', f.id]">
+        <a [routerLink]="['/food', f.id, 'detail']">
           <span>
             {{f.name}}
           </span>

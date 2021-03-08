@@ -4,18 +4,17 @@
         "name": "蘑菇",
         "star": 1,
         "craftUsage": [
-            "Chicken-Mushroom Skewer",
-            "Fruity Skewers",
-            "Triple-Layered Consommé",
-            "Cold Noodles with Mountain Delicacies",
-            "Noodles with Mountain Delicacies",
-            "Qingce Stir Fry",
-            "Invigorating Pizza",
-            "Mushroom Pizza"
+            "野菇鸡肉串",
+            "果香串烤",
+            "扣三丝",
+            "山珍冷卤面",
+            "山珍热卤面",
+            "轻策农家菜",
+            "提神醒脑披萨",
+            "烤蘑菇披萨"
         ],
         "obtainedFrom": [
-            "Found in the wild",
-            "Purchased at Wanmin Restaurant"
+            "野外收集获取"
         ],
         "description" : "生命力旺盛的常见菌类。只要拥有适宜的荫蔽与水，在何处都能蓬勃生长。"
     },
@@ -24,18 +23,18 @@
         "name": "禽肉",
         "star": 1,
         "craftUsage": [
-            "Chicken-Mushroom Skewer",
-            "Fruity Skewers",
-            "Triple-Layered Consommé",
-            "Cold Noodles with Mountain Delicacies",
-            "Noodles with Mountain Delicacies",
-            "Qingce Stir Fry",
-            "Invigorating Pizza",
-            "Mushroom Pizza"
+            "野菇鸡肉串",
+            "果香串烤",
+            "扣三丝",
+            "山珍冷卤面",
+            "山珍热卤面",
+            "轻策农家菜",
+            "提神醒脑披萨",
+            "烤蘑菇披萨"
         ],
         "obtainedFrom": [
-            "Found in the wild",
-            "Purchased at Wanmin Restaurant"
+            "野外收集获取",
+            "商店购买"
         ],
         "description" : "禽类的新鲜肉块。经过适当处理可以制成让人精神一振的佳肴。"
 

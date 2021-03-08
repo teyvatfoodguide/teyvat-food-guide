@@ -17,8 +17,15 @@
             </a>
           </td>
           <td>{{ingredient.star}}</td>
-      
-          <td *ngFor="let usage of ingredient.craftUsage">{{usage}}</td>
+        </tr>
+        <tr>
+          <th>Used in</th>
+          <td>
+            <div *ngFor="let usage of ingredient.craftUsage">
+              <span>{{usage}}</span><br/>
+            </div>
+            
+          </td>
         </tr>
       </table>
 </div>
