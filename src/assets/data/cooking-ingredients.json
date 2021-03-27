@@ -2,7 +2,7 @@
     {
         "id": "Mushroom",
         "name": "Mushroom",
-        "star": 1,
+        "rarity": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
@@ -22,7 +22,7 @@
     {
         "id": "Fowl",
         "name": "Fowl",
-        "star": 1,
+        "rarity": 1,
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",

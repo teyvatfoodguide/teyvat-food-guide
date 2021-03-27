@@ -2,7 +2,7 @@
     {
         "id": "Mushroom",
         "name": "蘑菇",
-        "star": 1,
+        "rarity": 1,
         "craftUsage": [
             "野菇鸡肉串",
             "果香串烤",
@@ -21,7 +21,7 @@
     {
         "id": "Fowl",
         "name": "禽肉",
-        "star": 1,
+        "rarity": 1,
         "craftUsage": [
             "野菇鸡肉串",
             "果香串烤",

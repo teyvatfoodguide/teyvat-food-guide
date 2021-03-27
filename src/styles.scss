@@ -3,24 +3,12 @@
 
 $primary: rgb(111, 0, 255);
 
-body {
-    margin: 0;
-    font-family: 'Nunito', 'sans-serif';
-    font-size: 18px;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
 
 h1 {
     margin-top: 2em;
 }
 
-h2{
-    text-align: center;
-}
+
 
 img.icon{
     display: block;
@@ -29,84 +17,9 @@ img.icon{
     margin-right: auto;
 }
 
-.infoGridContainer{
-    display: grid;
-    grid-template-columns: 35% 55%;
-    justify-content: space-evenly;
-}
-
-.wrapContent{
-    // width: -webkit-max-content;
-    // width: -moz-max-content;
-    // width: max-content;
-    max-width: 100%
-}
-
-table{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-td {
-    text-align: center;
-    vertical-align: middle;
-}
-
-//sub navbar in food info and ingredient info
-nav.subNav{
-    margin-left: auto;
-    margin-right: auto;
-    a {
-        padding: 5px 10px;
-        text-decoration: none;
-        margin-right: 10px;
-        margin-top: 10px;
-        display: inline-block;
-        background-color: #eee;
-        border-radius: 4px;
-      }
-    a:visited, a:link {
-        color: #607D8B;
-    } 
-    a:hover {
-        color: #039be5;
-        background-color: #CFD8DC;
-    }
-    a.active {
-        color: #039be5;
-    }
-}
-
-//main nav bar
-header {
-    background: $primary;
-    padding: 1em 0;
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    a.logo {
-        font-weight: bold;
-    }
-
-    nav {
-        float: right;
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            display: flex;
-
-            li a {
-                padding: 1em;
-
-                &:hover {
-                    background: darken($primary, 10%);
-                }
-            }
-        }
-    }
-}
-
-
+// .mat-tab-label{
+//     color: black;
+//     width: fit-content;
+// }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

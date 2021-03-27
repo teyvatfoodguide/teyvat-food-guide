@@ -16,17 +16,17 @@
         "isSpecial": false,
         "foodPotency":[
             {
-                "type": "normal",
+                "type": "Normal",
                 "description": "A skewer of mushrooms and poultry. Fresh poultry is complimented by fragrant mushrooms. Don't be picky, chow down!",
                 "effect": "Restores 9% of Max HP and 1,000 HP to the selected character."
             },
             {
-                "type": "delicious",
+                "type": "Delicious",
                 "description": "A skewer of mushrooms and poultry. All the best the wild has to offer are pierced on just one stick.",
                 "effect": "Restores 10% of Max HP and 1,200 HP to the selected character."
             },
             {
-                "type": "suspicious",
+                "type": "Suspicious",
                 "description": "A skewer of mushrooms and poultry. At first glance it's hard to tell which is which.",
                 "effect": "Restores 8% of Max HP and 800 HP to the selected character."
             }

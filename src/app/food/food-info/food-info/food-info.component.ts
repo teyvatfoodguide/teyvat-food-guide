@@ -13,8 +13,8 @@ export class FoodInfoComponent implements OnInit {
 
   id: String;
   food;
+  f;
   lang: string;
-  potency = 'normal'
 
 
   constructor(private _route: ActivatedRoute, private _data: DataService) { 
@@ -25,11 +25,12 @@ export class FoodInfoComponent implements OnInit {
     this.lang = localStorage.getItem('lang') || 'en'
     this._data.getFood(this.lang).subscribe((data) =>{
       this.food = <Food> data
+      this.food.forEach(element => {
+        if(element.id == this.id){
+          this.f = element
+        }
+      });
     })
-  }
-
-  changePotency(p:string){
-    this.potency = p;
   }
 
 }

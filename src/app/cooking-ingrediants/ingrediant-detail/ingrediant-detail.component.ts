@@ -15,6 +15,7 @@ export class IngrediantDetailComponent implements OnInit {
 
   id: String
   ingredients;
+  ingredient;
   lang: string;
 
   constructor(
@@ -26,9 +27,15 @@ export class IngrediantDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //get data based on language
     this.lang = localStorage.getItem('lang') || 'en' ;
     this._data.getIngredients(this.lang).subscribe((data) =>{
       this.ingredients = <CookingIngredient> data
+      this.ingredients.forEach((i: { id: String; }) => {
+        if(i.id == this.id){
+          this.ingredient = i
+        }
+      });
     })
   }
 

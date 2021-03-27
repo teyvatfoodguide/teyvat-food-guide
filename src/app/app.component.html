@@ -1,15 +1,24 @@
-<header>
-  <div class="container">
-    <a href="#" class="logo" routerLink="/">Teyvat Food Guide Ver-0.1</a>
-    <nav>
-      <ul>
-        <li><a href="#" routerLink="/" routerLinkActive="active">Home</a></li>
-        <li><a href="#" routerLink="/food" routerLinkActive="active">Food</a></li>
-        <li><a href="#" routerLink="/ingrediants" routerLinkActive="active">Cooking Ingrediant</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid text-light">
+    <a class="navbar-brand" href="#" routerLink="/" routerLinkActive="active">Teyvat Food Guide - Ver 0.1</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/food" routerLinkActive="active">Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/ingredients" routerLinkActive="active">Cooking Ingrediant</a>
+        </li>
       </ul>
-    </nav>
+    </div>
   </div>
-</header>
+</nav>
 
 <div class="container">
   <router-outlet></router-outlet>

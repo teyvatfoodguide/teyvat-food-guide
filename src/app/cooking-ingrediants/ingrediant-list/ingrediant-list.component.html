@@ -1,24 +1,23 @@
-<h2>Cooking Ingrediants</h2>
-<table>
+<h2>Cooking Ingredients</h2>
+<table class="table text-center">
   <tr>
     <th>Image</th>
     <th>Name</th>
-    <th>Star</th>
+    <th>Rarity</th>
     <th>Description</th>
   </tr>
-  <tr *ngFor="let ingrediant of ingrediants">
+  <tr *ngFor="let i of ingredients">
     <td>
-      <img class="icon" src='{{"assets/images/" + ingrediant.id + ".png"}}'>
+      <img class="icon" src='{{"assets/images/" + i.id + ".png"}}'>
     </td>
     <td>
-      <a [routerLink]="['/ingrediant', ingrediant.id]">
+      <a [routerLink]="['/ingredient', i.id]">
         <span>
-          {{ingrediant.name}}
+          {{i.name}}
         </span>
       </a>
     </td>
-    <td>{{ingrediant.star}}</td>
-    <td>{{ingrediant.description}}</td>
-    <!-- <td *ngFor="let usage of ingrediant.craftUsage">{{usage}}</td> -->
+    <td>{{i.rarity}}</td>
+    <td>{{i.description}}</td>
   </tr>
 </table>

@@ -1,31 +1,29 @@
-<div *ngFor="let ingredient of ingredients">
-    <table *ngIf="ingredient.id==id">
-        <tr>
-          <th>Image</th>
-          <th>Name</th>
-          <th>Star</th>
-        </tr>
-        <tr>
-          <td>
-              <img src='{{"assets/images/" + ingredient.id + ".png"}}'>
-          </td>
-          <td>
-            <a [routerLink]="['/ingrediant', ingredient.id]">
-              <span>
-                {{ingredient.name}}
-              </span>
-            </a>
-          </td>
-          <td>{{ingredient.star}}</td>
-        </tr>
-        <tr>
-          <th>Used in</th>
-          <td>
-            <div *ngFor="let usage of ingredient.craftUsage">
-              <span>{{usage}}</span><br/>
-            </div>
-            
-          </td>
-        </tr>
-      </table>
+<div class="row">
+  <img class="col img-block" src='{{"assets/images/" + ingredient.id + ".png"}}'>
+  <table class="table col-6">
+    <tr>
+      <th>Name</th>
+      <td>
+        {{ingredient.name}}
+      </td>
+    </tr>
+    <tr>
+      <th>Rarity</th>
+      <td>{{ingredient.rarity}}</td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>
+        {{ingredient.description}}
+      </td>
+    </tr>
+    <tr>
+      <th>Used in</th>
+      <td>
+        <div *ngFor="let usage of ingredient.craftUsage">
+          <span>{{usage}}</span><br />
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>

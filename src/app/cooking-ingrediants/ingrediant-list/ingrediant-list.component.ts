@@ -11,14 +11,14 @@ import { CookingIngredient } from '../../Interface/ICookingIngredient';
 export class IngrediantListComponent implements OnInit {
 
   lang: string;
-  ingrediants;
+  ingredients;
 
   constructor(private _data: DataService) { }
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en' ;
     this._data.getIngredients(this.lang).subscribe((data) =>{
-      this.ingrediants = <CookingIngredient> data
+      this.ingredients = <CookingIngredient> data
     })
     
 

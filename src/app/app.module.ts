@@ -14,7 +14,10 @@ import { FoodModule } from './food/food.module';
 import { FoodInfoModule } from './food/food-info/food-info.module';
 import { MaterialModule } from'./material/material.module';
 
-import { FooterComponent } from './footer/footer.component'; 
+import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { TabModule } from './tab/tab.module';
+
 
 
 @NgModule({
@@ -22,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     CookingIngrediantsModule,
     FoodModule,
     FoodInfoModule,
-
+    // TabModule,
+    NgbModule,
     AppRoutingModule //put it at last to accept all the routers' setting
   ],
   providers: [],

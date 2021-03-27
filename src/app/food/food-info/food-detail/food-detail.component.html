@@ -1,55 +1,23 @@
-<h2 *ngIf="id">{{name}}</h2>
-<div class="wrapContent">
-  <div *ngFor="let f of food">
-    <div *ngIf="f.id==id">
-      <table>
-        <tr>
-          <th>Rarity</th>
-        </tr>
-        <tr>
-          <td>{{f.rarity}}</td>
-        </tr>
-        <div *ngIf="f.hasRecipe==true; else elseBlock">
-          <div *ngFor="let r of recipes">
-            <table *ngIf="r.id==id">
-              <tr>
-                <th>Ingredient</th>
-                <th>Amount</th>
-              </tr>
-              <tr *ngFor="let i of r.ingredients">
-                <td>{{i.name}}</td>
-                <td>{{i.amount}}</td>
-              </tr>
-    
-            </table>
-          </div>
-        </div>
-      </table>
-  
-      
-      
-      <ng-template #elseBlock>
-
-            <tr>
-              <th>Effect</th>
-            </tr>
-            <td>
-              {{f.effect}}
-            </td>
-            <tr>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>{{f.description}}</td>
-            </tr>
-            <tr>
-              <th>Obtained From</th>
-            </tr>
-            <tr>
-              <td>{{f.obtainedFrom}}</td>
-            </tr>
-      </ng-template>
-  
-    </div>
+<div>
+  <div *ngIf="f.hasRecipe; else noRecipe">
+    <table>
+      <tr>
+        <th>Rarity</th>
+        <td>{{f.star}}</td>
+      </tr>
+    </table>
   </div>
+
+  
+
+  <ng-template #noRecipe>
+    <table>
+      <tr>
+        <td>
+        <img src='{{"assets/images/" + f.id + ".png"}}'>
+        </td>
+      </tr>
+    </table>
+  </ng-template>
 </div>
+<span>{{recipe.isSpecial}}</span>

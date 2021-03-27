@@ -6,6 +6,7 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { FoodInfoComponent } from './food-info/food-info/food-info.component';
 
 import { MatButtonToggleModule } from '@angular/material/button-toggle'; 
+import { MatTabsModule } from '@angular/material/tabs'; 
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   imports: [
     CommonModule,
     FoodRoutingModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTabsModule
   ]
 })
 export class FoodModule { }
