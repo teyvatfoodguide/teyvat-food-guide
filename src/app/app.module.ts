@@ -7,16 +7,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { FoodRoutingModule } from './food/food-routing.module';
+import { FoodListComponent } from './food/food-list/food-list.component';
+import { FoodInfoComponent } from './food/food-info/food-info/food-info.component';
+
+import { FoodDetailComponent } from './food/food-info/food-detail/food-detail.component';
+import { ReallifeRecipeComponent } from './food/food-info/reallife-recipe/reallife-recipe.component';
+
+import { CookingIngrediantsRoutingModule } from './cooking-ingrediants/cooking-ingrediants-routing.module';
+import { IngrediantListComponent } from './cooking-ingrediants/ingrediant-list/ingrediant-list.component';
+import { IngrediantDetailComponent } from './cooking-ingrediants/ingrediant-detail/ingrediant-detail.component';
+
+import { TabModule } from './tab/tab.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CookingIngrediantsModule } from './cooking-ingrediants/cooking-ingrediants.module';
-import { FoodModule } from './food/food.module'; 
-import { FoodInfoModule } from './food/food-info/food-info.module';
-import { MaterialModule } from'./material/material.module';
-
-import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { TabModule } from './tab/tab.module';
 
 
 
@@ -25,17 +32,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    FoodListComponent,
+    FoodInfoComponent,
+    FoodDetailComponent,
+    ReallifeRecipeComponent,
+    IngrediantListComponent,
+    IngrediantDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    CookingIngrediantsModule,
-    FoodModule,
-    FoodInfoModule,
-    // TabModule,
+    FoodRoutingModule,
+    CookingIngrediantsRoutingModule,
+    TabModule,
     NgbModule,
     AppRoutingModule //put it at last to accept all the routers' setting
   ],

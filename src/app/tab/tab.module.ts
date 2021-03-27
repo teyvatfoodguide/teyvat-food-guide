@@ -13,7 +13,8 @@ import { TabComponent } from './tab.component';
   ],
   exports: [
     TabComponent,
-    TabsComponent
+    TabsComponent,
+
   ]
 })
 export class TabModule { }
