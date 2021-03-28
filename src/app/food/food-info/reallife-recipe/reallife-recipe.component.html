@@ -1,1 +1,6 @@
-<p>reallife-recipe works!</p>
+<div class="list-group mt-2">
+    <div *ngFor="let item of list.links">
+        <a href={{item.url}} target="_blank" class="list-group-item list-group-item-action">{{item.title}}</a>
+    </div>
+    
+</div>

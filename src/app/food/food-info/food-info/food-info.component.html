@@ -1,105 +1,84 @@
 <div>
     <h2 class="row">{{f.name}}</h2>
-    
-    <div class="row" *ngIf="f.hasRecipe==true;">
+
+    <div class="row mb-auto" *ngIf="f.hasRecipe==true;">
         <div class="col-6">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="normal-tab">Normal</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="delicious-tab">Delicious</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="suspicious-tab">Suspicious</button>
-                </li>
-            </ul>
-            <table id="normal" class="table">
-                <tr>
-                    <td>
-                        <img src='{{"assets/images/" + f.id + "-Normal.png"}}'>
-                    </td>
-                </tr>
-            </table>
-            <table id="delicous" class="table">
-                <tr>
-                    <td>
-                        <img src='{{"assets/images/" + f.id + "-Delicious.png"}}'>
-                    </td>
-                </tr>
-            </table>
-            <table id="suspicious" class="table">
-                <tr>
-                    <td>
-                        <img src='{{"assets/images/" + f.id + "-Suspicious.png"}}'>
-                    </td>
-                </tr>
-            </table>
+            <tab-group>
+                <tab [tabTitle]="'Normal'">
+                    <table id="normal" class="table text-center">
+                        <tr>
+                            <td>
+                                <img src='{{"assets/images/" + f.id + "-Normal.png"}}'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Effect</th>
+                        </tr>
+                        <tr>
+                            <td>Restore 1000HP</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>hmm yummy</td>
+                        </tr>
+                    </table>
+                </tab>
+                <tab [tabTitle]="'Delicious'">
+                    <table class="table text-center">
+                        <tr>
+                            <td>
+                                <img src='{{"assets/images/" + f.id + "-Delicious.png"}}'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Effect</th>
+                        </tr>
+                        <tr>
+                            <td>Restore 1200HP</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>hmm</td>
+                        </tr>
+                    </table>
+                </tab>
+                <tab [tabTitle]="'Suspicious'">
+                    <table class="table text-center">
+                        <tr>
+                            <td>
+                                <img src='{{"assets/images/" + f.id + "-Suspicious.png"}}'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Effect</th>
+                        </tr>
+                        <tr>
+                            <td>Restore 800HP</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>emmmm</td>
+                        </tr>
+                    </table>
+                </tab>
+            </tab-group>
         </div>
+
         <div class="col-6">
             <nav>
                 <div class="nav nav-tabs">
                     <a class="nav-link active" routerLink="./detail" routerLinkActive="active">Details</a>
                     <a class="nav-link" routerLink="./reallife-recipe" routerLinkActive="active">Real-life Recipe</a>
                 </div>
-                
             </nav>
             <router-outlet></router-outlet>
         </div>
     </div>
 
-    <!-- <ng-template class="row" #noRecipe>
-            <table>
-                <tr>
-                    <td>
-                        <img src='{{"assets/images/" + f.id + ".png"}}'>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Rarity
-                    </th>
-                    <td>
-                        {{f.rarity}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Effect
-                    </th>
-                    <td>
-                        {{f.effect}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Description
-                    </th>
-                    <td>
-                        {{f.description}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Obtained From
-                    </th>
-                    <td>
-                        <span *ngFor="let o of f.obtainedFrom">{{o}}<br /></span>
-                    </td>
-                </tr>
-            </table>
-        </ng-template> -->
-        <div class="row">
-            <tab-group>
-                <tab [tabTitle]="'Tab 1'">
-                    Tab 1 content
-                </tab>
-                <tab [tabTitle]="'Tab 2'">
-                    Tab 2 content
-                </tab>
-                <tab [tabTitle]="'Tab 3'">
-                    Tab 3 content
-                </tab>
-            </tab-group>
-        </div>
 </div>

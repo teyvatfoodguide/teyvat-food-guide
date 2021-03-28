@@ -41,19 +41,17 @@ export class FoodDetailComponent implements OnInit {
         }
       });
     })
-    if (this.f.hasRecipe) {
-      this._data.getRecipes(this.lang).subscribe((data) => {
-        this.recipes = data
+    this._data.getRecipes(this.lang).subscribe((data) => {
+      this.recipes = data
 
-        // this.recipes.forEach(element => {
-        //   if (element.id == this.id) {
-        //     this.recipe = element
-        //     this.potencies = element.foodPotency
-        //     this.ingreditents = element.ingredients
-        //   }
-        // });
-      })
-    }
+      // this.recipes.forEach(element => {
+      //   if (element.id == this.id) {
+      //     this.recipe = element
+      //     this.potencies = element.foodPotency
+      //     this.ingreditents = element.ingredients
+      //   }
+      // });
+    })
 
   }
 

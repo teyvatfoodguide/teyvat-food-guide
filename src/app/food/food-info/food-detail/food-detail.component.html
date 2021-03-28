@@ -1,9 +1,28 @@
 <div>
-  <div *ngIf="f.hasRecipe; else noRecipe">
-    <table>
+  <div>
+    <table class="table text-center">
       <tr>
-        <th>Rarity</th>
-        <td>{{f.star}}</td>
+        <th colspan="2">Rarity</th>
+      </tr>
+      <tr>
+        <td colspan="2">1</td>
+      </tr>
+      <tr>
+        <th colspan="2">Obtained from</th>
+      </tr>
+      <tr>
+        <th>Recipe</th>
+        <td>Shop</td>
+      </tr>
+      <tr>
+        <th>Food</th>
+        <td>Restaurant</td>
+      </tr>
+      <tr>
+        <th colspan="2">Cooker</th>
+      </tr>
+      <tr>
+        <td colspan="2">Paimon</td>
       </tr>
     </table>
   </div>
@@ -20,4 +39,4 @@
     </table>
   </ng-template>
 </div>
-<span>{{recipe.isSpecial}}</span>
+<span></span>

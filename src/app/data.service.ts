@@ -38,6 +38,10 @@ export class DataService {
 
   }
 
+  getReallifeReference(){
+    return this._http.get('assets/data/reallife-reference.json')
+  }
+
 
 
 }

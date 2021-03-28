@@ -10,16 +10,14 @@ import { TabComponent } from './tab.component';
   selector: 'tab-group',
   template: `
     <ul class="nav nav-tabs">
-      <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
-        <button class="nav-link active">{{tab.title}}</button>
+      <li class="nav-item" *ngFor="let tab of tabs" (click)="selectTab(tab)">
+        <a class="nav-link" [class.active]="tab.active">{{tab.title}}</a>
       </li>
     </ul>
     <ng-content></ng-content>
   `,
   styles: [`
-    .tab-close {
-      color: gray;
-      text-align: right;
+    li{
       cursor: pointer;
     }
   `]

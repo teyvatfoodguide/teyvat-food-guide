@@ -1,6 +1,28 @@
 [
     {
         "id": "Chicken-Mushroom Skewer",
-        "name": "Chicken-Mushroom Skewer"
+        "links": [
+            {
+                "title": "【原神】野菇鸡肉串 ——你的第一道菜，先别吃应急食品小派蒙了@盐鱼料理长",
+                "url": "https://www.bilibili.com/video/BV1Ni4y1u72n"
+            },
+            {
+                "title": "【果香串烤+野菇鸡肉串】原神 凯亚生日 提瓦特美食札记 08",
+                "url": "https://www.bilibili.com/video/BV1xr4y1c7ty"
+            }
+        ]
+    },
+    {
+        "id": "Fruity Skewers",
+        "links": [
+            {
+                "title": "【果香串烤+野菇鸡肉串】原神 凯亚生日 提瓦特美食札记 08",
+                "url": "https://www.bilibili.com/video/BV1xr4y1c7ty"
+            },
+            {
+                "title": "【原神】野菇鸡肉串 ——你的第一道菜，先别吃应急食品小派蒙了@盐鱼料理长",
+                "url": "https://www.bilibili.com/video/BV1Ni4y1u72n"
+            }
+        ]
     }
 ]
