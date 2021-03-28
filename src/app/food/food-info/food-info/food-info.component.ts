@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from '../../../data.service';
-import { Food } from 'src/app/Interface/IFood';
 
 @Component({
   selector: 'app-food-info',
@@ -14,6 +13,10 @@ export class FoodInfoComponent implements OnInit {
   id: String;
   food;
   f;
+  normal;
+  delicious;
+  suspicious;
+
   lang: string;
 
 
@@ -24,10 +27,21 @@ export class FoodInfoComponent implements OnInit {
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en'
     this._data.getFood(this.lang).subscribe((data) =>{
-      this.food = <Food> data
+      this.food = data
       this.food.forEach(element => {
         if(element.id == this.id){
           this.f = element
+        }
+      });
+      this.f.foodPotency.forEach(element => {
+        if(element.type == "Normal"){
+          this.normal = element;
+        }
+        if(element.type == "Delicious"){
+          this.delicious = element;
+        }
+        if(element.type == "Suspicious"){
+          this.suspicious = element;
         }
       });
     })

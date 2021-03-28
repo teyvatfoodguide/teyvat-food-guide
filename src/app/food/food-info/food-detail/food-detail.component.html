@@ -5,35 +5,55 @@
         <th colspan="2">Rarity</th>
       </tr>
       <tr>
-        <td colspan="2">1</td>
+        <td colspan="2">{{f.rarity}}</td>
       </tr>
       <tr>
         <th colspan="2">Obtained from</th>
       </tr>
       <tr>
         <th>Recipe</th>
-        <td>Shop</td>
+        <td>
+          <div *ngFor="let i of f.recipeObtainedFrom">
+            <span>{{i}}</span><br />
+          </div>
+        </td>
       </tr>
       <tr>
         <th>Food</th>
-        <td>Restaurant</td>
+        <td>
+          <div *ngFor="let i of f.foodObtainedFrom">
+            <span>{{i}}</span><br />
+          </div>
+        </td>
+      </tr>
+      
+    </table>
+    <table class="table text-center" *ngIf="f.isSpecial">
+      <tr>
+        <th colspan="2">Base Recipe</th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <!-- <a [routerLink]="['/food', f.baseRecipeId, 'detail']">{{f.baseRecipeName}}</a> -->
+          {{f.baseRecipeName}}
+        </td>
       </tr>
       <tr>
         <th colspan="2">Cooker</th>
       </tr>
       <tr>
-        <td colspan="2">Paimon</td>
+        <td colspan="2">{{f.cooker}}</td>
       </tr>
     </table>
   </div>
 
-  
+
 
   <ng-template #noRecipe>
     <table>
       <tr>
         <td>
-        <img src='{{"assets/images/" + f.id + ".png"}}'>
+          <img src='{{"assets/images/" + f.id + ".png"}}'>
         </td>
       </tr>
     </table>

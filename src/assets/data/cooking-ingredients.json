@@ -3,6 +3,10 @@
         "id": "Mushroom",
         "name": "Mushroom",
         "rarity": 1,
+        "obtainedFrom": [
+            "Found in the wild",
+            "Purchased at Wanmin Restaurant"
+        ],
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
@@ -13,16 +17,18 @@
             "Invigorating Pizza",
             "Mushroom Pizza"
         ],
-        "obtainedFrom": [
-            "Found in the wild",
-            "Purchased at Wanmin Restaurant"
-        ],
-        "description" : "Hardy common fungi. Can grow anywhere with the right amount of shade and moisture."
+        "description" : "Hardy common fungi. Can grow anywhere with the right amount of shade and moisture.",
+        "isEatable": false
     },
     {
         "id": "Fowl",
         "name": "Fowl",
         "rarity": 1,
+        "obtainedFrom": [
+            "Found in the wild",
+            "Purchased at Wanmin Restaurant"
+        ],
+        "description" : "A fresh bird. Handled correctly it can make a hearty meal.",
         "craftUsage": [
             "Chicken-Mushroom Skewer",
             "Fruity Skewers",
@@ -33,11 +39,20 @@
             "Invigorating Pizza",
             "Mushroom Pizza"
         ],
-        "obtainedFrom": [
-            "Found in the wild",
-            "Purchased at Wanmin Restaurant"
+        "isEatable": false
+    },
+    {
+        "id": "Apple",
+        "name": "Apple",
+        "rarity": 1,
+        "description": "Crisp and fragrant. Delicious raw or fermented into wine. Can be also made into a refreshing alcohol—free beverage. ",
+        "obtainedFrom": ["Picked up from apple tree", "Purchase from sellers"],
+        "craftUsage": [
+            "Satisfying Salad",
+            "Der Weisheit Letzter Schluss (Life)",
+            "Northern Apple Stew"
         ],
-        "description" : "A fresh bird. Handled correctly it can make a hearty meal."
-
+        "isEatable": true,
+        "effect": "Restores 300 HP." 
     }
 ]

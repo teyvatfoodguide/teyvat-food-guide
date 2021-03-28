@@ -1,29 +1,71 @@
 [
-    {
-        "id": "Apple",
-        "name": "Apple",
-        "rarity": 1,
-        "hasRecipe": false,
-        "effect": "Restores 300 HP." ,
-        "description": "Crisp and fragrant. Delicious raw or fermented into wine. Can be also made into a refreshing alcohol—free beverage. ",
-        "obtainedFrom": ["Picked up from apple tree", "Purchase from sellers"]
-    },
+    
     {
         "id": "Chicken-Mushroom Skewer",
         "name": "Chicken-Mushroom Skewer",
         "rarity": 1,
-        "hasRecipe": true,
-        "effect": "",
-        "description": "",
-        "obtainedFrom": []
+        "ingredients": [
+            {
+                "name": "Mushroom",
+                "amount": 1
+            },
+            {
+                "name": "Fowl",
+                "amount": 1
+            }
+        ],
+        "foodObtainedFrom": [
+            "Cooking",
+            "Purchase from restaurant"
+        ],
+        "recipeObtainedFrom": [
+            "Default recipe with player"
+        ],
+        "isSpecial": false,
+        "foodPotency":[
+            {
+                "type": "Normal",
+                "description": "A skewer of mushrooms and poultry. Fresh poultry is complimented by fragrant mushrooms. Don't be picky, chow down!",
+                "effect": "Restores 9% of Max HP and 1,000 HP to the selected character."
+            },
+            {
+                "type": "Delicious",
+                "description": "A skewer of mushrooms and poultry. All the best the wild has to offer are pierced on just one stick.",
+                "effect": "Restores 10% of Max HP and 1,200 HP to the selected character."
+            },
+            {
+                "type": "Suspicious",
+                "description": "A skewer of mushrooms and poultry. At first glance it's hard to tell which is which.",
+                "effect": "Restores 8% of Max HP and 800 HP to the selected character."
+            }
+        ]
     },
     {
         "id": "Fruity Skewers",
         "name": "Fruity Skewers",
         "rarity": 1,
-        "hasRecipe": true,
-        "effect": "",
-        "description": "",
-        "obtainedFrom": []
+        "ingredients": [
+            {
+                "name": "Mushroom",
+                "amount": 1
+            },
+            {
+                "name": "Fowl",
+                "amount": 1
+            }
+        ],
+        "foodObtainedFrom": [
+            "Cooking",
+            "Purchase from restaurant"
+        ],
+        "recipeObtainedFrom": [
+            "Default recipe with player"
+        ],
+        "isSpecial": true,
+        "baseRecipeId": "Chicken-Mushroom Skewer",
+        "baseRecipeName": "Chicken-Mushroom Skewer",
+        "cooker": "Kaeya",
+        "description": "Kaeya's specialty. A chewy skewer with a rich sweet aftertaste.Wait...Is this really the smell of fruit?",
+        "effect": "Restores 16% of Max HP and an additional 1,350 HP."
     }
 ]

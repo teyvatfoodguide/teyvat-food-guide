@@ -1,24 +1,38 @@
-<div class="row">
-  <img class="col img-block" src='{{"assets/images/" + ingredient.id + ".png"}}'>
-  <table class="table col-6">
-    <tr>
-      <th>Name</th>
-      <td>
-        {{ingredient.name}}
-      </td>
-    </tr>
+<div class="row justify-content-between">
+  <h2 class="col">{{ingredient.name}}</h2>
+  <a class="col-2 btn btn-primary" [routerLink]="['/ingredients']">Back to List</a>
+</div>
+<div class="row justify-content-between">
+  <img class="col img-fluid" src='{{"assets/images/" + ingredient.id + ".png"}}'>
+  <table class="table col-6 text-center">
     <tr>
       <th>Rarity</th>
+    </tr>
+    <tr>
       <td>{{ingredient.rarity}}</td>
     </tr>
     <tr>
       <th>Description</th>
+    </tr>
+    <tr>
       <td>
         {{ingredient.description}}
       </td>
     </tr>
     <tr>
+      <th>Obtained from</th>
+    </tr>
+    <tr>
+      <td>
+        <div *ngFor="let i of ingredient.obtainedFrom">
+          <span>{{i}}</span><br />
+        </div>
+      </td>
+    </tr>
+    <tr>
       <th>Used in</th>
+    </tr>
+    <tr>
       <td>
         <div *ngFor="let usage of ingredient.craftUsage">
           <span>{{usage}}</span><br />

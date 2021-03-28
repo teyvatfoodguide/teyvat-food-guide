@@ -1,9 +1,12 @@
 <div>
-    <h2 class="row">{{f.name}}</h2>
+    <div class="row justify-content-between">
+        <h2 class="col">{{f.name}}</h2>
+        <a class="col-2 btn btn-primary" [routerLink]="['/food']">Back to List</a>
+    </div>
 
-    <div class="row mb-auto" *ngIf="f.hasRecipe==true;">
+    <div class="row mb-auto">
         <div class="col-6">
-            <tab-group>
+            <tab-group *ngIf="!f.isSpecial; else special">
                 <tab [tabTitle]="'Normal'">
                     <table id="normal" class="table text-center">
                         <tr>
@@ -15,13 +18,13 @@
                             <th>Effect</th>
                         </tr>
                         <tr>
-                            <td>Restore 1000HP</td>
+                            <td>{{normal.effect}}</td>
                         </tr>
                         <tr>
                             <th>Description</th>
                         </tr>
                         <tr>
-                            <td>hmm yummy</td>
+                            <td>{{normal.description}}</td>
                         </tr>
                     </table>
                 </tab>
@@ -36,13 +39,13 @@
                             <th>Effect</th>
                         </tr>
                         <tr>
-                            <td>Restore 1200HP</td>
+                            <td>{{delicious.effect}}</td>
                         </tr>
                         <tr>
                             <th>Description</th>
                         </tr>
                         <tr>
-                            <td>hmm</td>
+                            <td>{{delicious.description}}</td>
                         </tr>
                     </table>
                 </tab>
@@ -57,17 +60,52 @@
                             <th>Effect</th>
                         </tr>
                         <tr>
-                            <td>Restore 800HP</td>
+                            <td>{{suspicious.effect}}</td>
                         </tr>
                         <tr>
                             <th>Description</th>
                         </tr>
                         <tr>
-                            <td>emmmm</td>
+                            <td>{{suspicious.description}}</td>
                         </tr>
                     </table>
                 </tab>
             </tab-group>
+            <ng-template #special>
+                <table class="table text-center">
+                    <tr>
+                        <td colspan="2">
+                            <img src='{{"assets/images/" + f.id + ".png"}}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>{{f.effect}}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>{{f.description}}</td>
+                    </tr>
+                    <!-- <tr>
+                        <th colspan="2">Base Recipe</th>
+                      </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="" [routerLink]="['/food', f.baseRecipeId, 'detail']">{{f.baseRecipeName}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Cooker</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">{{f.cooker}}</td>
+                    </tr> -->
+                </table>
+            </ng-template>
         </div>
 
         <div class="col-6">

@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 import { DataService } from '../../data.service';
-import { CookingIngredient } from 'src/app/Interface/ICookingIngredient';
-
-
 
 @Component({
   selector: 'app-ingrediant-detail',
@@ -30,7 +27,7 @@ export class IngrediantDetailComponent implements OnInit {
     //get data based on language
     this.lang = localStorage.getItem('lang') || 'en' ;
     this._data.getIngredients(this.lang).subscribe((data) =>{
-      this.ingredients = <CookingIngredient> data
+      this.ingredients = data
       this.ingredients.forEach((i: { id: String; }) => {
         if(i.id == this.id){
           this.ingredient = i
